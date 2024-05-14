@@ -20,7 +20,7 @@ import generateNewImage from "./generateNewImage.js";
  * Untuk menggunakan salah satu fungsi, cukup impor objek DavinciUnlimited dan panggil fungsi yang diinginkan.
  * Contoh:
  * ```
- * import DavinciUnlimited from './DavinciUnlimited/index.js';
+ * import DavinciUnlimited from './Helpers/index.js';
  *
  * // Untuk mendapatkan inspirasi
  * const inspiration = await DavinciUnlimited.getInspiration(bearerToken);
