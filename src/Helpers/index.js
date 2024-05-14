@@ -4,9 +4,9 @@ import generateNewAccount from "./generateNewAccount.js";
 import generateNewImage from "./generateNewImage.js";
 
 /**
- * Dokumentasi untuk Helpers
+ * Dokumentasi untuk DavinciUnlimited
  *
- * Objek Helpers ini merupakan kumpulan dari beberapa fungsi yang membantu dalam proses
+ * Objek DavinciUnlimited ini merupakan kumpulan dari beberapa fungsi yang membantu dalam proses
  * pengambilan inspirasi, gaya, pembuatan akun baru, dan generasi gambar baru. Setiap fungsi
  * memiliki tujuan spesifik dan dapat digunakan secara independen berdasarkan kebutuhan.
  *
@@ -17,31 +17,31 @@ import generateNewImage from "./generateNewImage.js";
  * - generateNewImage: Fungsi untuk menghasilkan gambar baru berdasarkan prompt dan gaya yang diberikan.
  *
  * Cara menggunakan:
- * Untuk menggunakan salah satu fungsi, cukup impor objek Helpers dan panggil fungsi yang diinginkan.
+ * Untuk menggunakan salah satu fungsi, cukup impor objek DavinciUnlimited dan panggil fungsi yang diinginkan.
  * Contoh:
  * ```
- * import Helpers from './Helpers/index.js';
+ * import DavinciUnlimited from './DavinciUnlimited/index.js';
  *
  * // Untuk mendapatkan inspirasi
- * const inspiration = await Helpers.getInspiration(bearerToken);
+ * const inspiration = await DavinciUnlimited.getInspiration(bearerToken);
  *
  * // Untuk mendapatkan gaya
- * const styles = await Helpers.getStyles(bearerToken);
+ * const styles = await DavinciUnlimited.getStyles(bearerToken);
  *
  * // Untuk menghasilkan akun baru
- * const account = await Helpers.generateNewAccount();
+ * const account = await DavinciUnlimited.generateNewAccount();
  *
  * // Untuk menghasilkan gambar baru
- * const image = await Helpers.generateNewImage(bearerToken, prompt, aspect, style, substyles, seed, step, customImageToPath);
+ * const image = await DavinciUnlimited.generateNewImage(bearerToken, prompt, aspect, style, substyles, seed, step, customImageToPath);
  * ```
  *
  * Pastikan untuk mengganti parameter yang diperlukan sesuai dengan kebutuhan.
  */
-const Helpers = {
+const DavinciUnlimited = {
   getInspiration,
   getStyles,
   generateNewAccount,
   generateNewImage,
 };
 
-export default Helpers;
+export default DavinciUnlimited;
