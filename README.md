@@ -44,19 +44,19 @@ npm start
 ### Contoh Penggunaan Fungsi
 
 ```javascript
-import Helpers from "./Helpers/index.js";
+import DavinciUnlimited from "./Helpers/index.js";
 
 // Untuk mendapatkan inspirasi
-const inspiration = await Helpers.getInspiration(bearerToken);
+const inspiration = await DavinciUnlimited.getInspiration(bearerToken);
 
 // Untuk mendapatkan gaya
-const styles = await Helpers.getStyles(bearerToken);
+const styles = await DavinciUnlimited.getStyles(bearerToken);
 
 // Untuk menghasilkan akun baru
-const account = await Helpers.generateNewAccount();
+const account = await DavinciUnlimited.generateNewAccount();
 
 // Untuk menghasilkan gambar baru
-const image = await Helpers.generateNewImage(
+const image = await DavinciUnlimited.generateNewImage(
   bearerToken,
   prompt,
   aspect,
