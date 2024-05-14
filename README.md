@@ -1,5 +1,7 @@
 # Davinci Unlimited
 
+![Banner Davinci Unlimited](./davinci-unlimited.png)
+
 Davinci Unlimited adalah generator gambar AI yang menggunakan Davinci tanpa batasan jumlah gambar yang ingin Anda buat. Proyek ini memungkinkan pengguna untuk menghasilkan gambar baru berdasarkan prompt dan gaya yang diberikan, mendapatkan inspirasi, dan gaya dari API, serta menghasilkan akun baru.
 
 ## Fitur
