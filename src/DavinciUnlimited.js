@@ -1,7 +1,9 @@
-import DavinciUnlimited from "./Helpers/index.js"; // Mengimpor modul DavinciUnlimited
-import ora from "ora"; // Mengimpor modul ora
-import chalk from "chalk"; // Mengimpor modul chalk
+import DavinciUnlimited from "./Helpers/index.js";
+import ora from "ora";
+import chalk from "chalk";
 import inquirer from "inquirer";
+import fs from "fs-extra";
+import fetch from "node-fetch";
 
 const davinciUnlimited = async () => {
   const spinner = ora("Memulai proses pembuatan akun baru...").start();
@@ -123,6 +125,63 @@ const davinciUnlimited = async () => {
   console.log(`Seed: ${chalk.cyan(answers.seed)}`);
   console.log(`Step: ${chalk.red(answers.step)}`);
   console.log(`⎋ Lihat gambar versi HD: ${chalk.cyanBright.underline(url)}`);
+
+  const downloadImage = async (url, filename) => {
+    try {
+      const response = await fetch(url);
+      const buffer = await response.arrayBuffer();
+      await fs.writeFile(`${filename}.png`, Buffer.from(buffer));
+      console.log(
+        chalk.green(`Gambar berhasil disimpan sebagai ${filename}.png`)
+      );
+    } catch (error) {
+      console.error(
+        chalk.red("Terjadi kesalahan saat menyimpan gambar."),
+        error
+      );
+    }
+  };
+
+  const saveImagePrompt = [
+    {
+      type: "confirm",
+      name: "download",
+      message: "Apakah Anda ingin mendownload gambar tersebut (png)?",
+      default: true,
+    },
+    {
+      type: "input",
+      name: "filename",
+      message: "Masukkan nama file untuk gambar (default random):",
+      when: (answers) => answers.download,
+      default: () => `davinci-image-${Date.now()}`,
+    },
+  ];
+
+  const { download, filename } = await inquirer.prompt(saveImagePrompt);
+
+  if (download) {
+    await downloadImage(url, filename);
+  }
+
+  const restartPrompt = [
+    {
+      type: "confirm",
+      name: "restart",
+      message: "Apakah Anda ingin menjalankan ulang programnya?",
+      default: true,
+    },
+  ];
+
+  const { restart } = await inquirer.prompt(restartPrompt);
+
+  if (restart) {
+    davinciUnlimited();
+  } else {
+    console.log(
+      chalk.yellow("Terima kasih telah menggunakan Davinci Unlimited.")
+    );
+  }
 };
 
 davinciUnlimited(); // Menjalankan fungsi davinciUnlimited

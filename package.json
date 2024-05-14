@@ -1,6 +1,6 @@
 {
   "name": "davinci-unlimited",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "AI Image Generator uses Davinci with no limit to the number of images you want to create.",
   "main": "src/DavinciUnlimited.js",
   "bin": {

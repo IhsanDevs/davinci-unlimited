@@ -8,8 +8,12 @@
 .AppleDouble
 .LSOverride
 
+**/*.png
+!davinci-unlimited.png
+
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
