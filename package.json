@@ -1,0 +1,37 @@
+{
+  "name": "davinci-unlimited",
+  "version": "1.0.0",
+  "description": "AI Image Generator uses Davinci with no limit to the number of images you want to create.",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IhsanDevs/davinci-unlimited.git"
+  },
+  "keywords": [
+    "Davinci",
+    "AI",
+    "Image",
+    "Generator"
+  ],
+  "author": "Ihsan Devs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IhsanDevs/davinci-unlimited/issues"
+  },
+  "homepage": "https://github.com/IhsanDevs/davinci-unlimited#readme",
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "fs-extra": "^11.2.0",
+    "node-fetch": "^3.3.2",
+    "ora": "^8.0.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.24.1",
+    "@babel/preset-env": "^7.24.5",
+    "jest": "^29.7.0"
+  }
+}
